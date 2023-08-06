@@ -1,0 +1,48 @@
+﻿@model List<YEGNA_BETS.Models.Domain.Package>
+@{
+    ViewData["Title"] = "All Packages";
+}
+<h4 class="sub-header">Package options <img src="~/img/package-box.png" class="small-icons" alt="wand-err" /></h4>
+<hr />
+<style>
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 350px;
+        min-width: 250px;
+        margin: 1vw;
+        margin-bottom: 2vh;
+        margin-top: 0;
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+        .card img {
+            width: 80px;
+            height: 80px;
+            margin: auto;
+        }
+
+    .bets {
+        color: #198754;
+        font-size: 22px;
+        font-weight: 600;
+    }
+</style>
+
+<div class="wrapper-for-auth-form ">
+    @foreach (var package in Model)
+    {
+
+        <div class="card">
+            <img src="~/img/crown.png" alt="-err" class="small-icon">
+            <h3>@package.Name</h3>
+            <p class="bets">@package.Value Bets</p>
+            <h5>@package.Price Birr</h5>
+            <a href="/Admin/NewTicket/@package.Id">
+                <button class="btn btn-lg primary">Select</button>
+            </a>
+        </div>
+
+    }
+</div>

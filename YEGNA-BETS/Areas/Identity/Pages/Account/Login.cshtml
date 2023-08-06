@@ -1,0 +1,57 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+}
+
+<div class="wrapper-for-auth-form">
+    <div class="auth-form">
+        <section>
+            <form id="account" method="post">
+                <h1 class="slogan">Login and enjoy your bets! 🏆</h1>
+                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Email" class="form-control" autocomplete="username"
+                           aria-required="true" placeholder="name@example.com" />
+                    <label asp-for="Input.Email" class="form-label">Email</label>
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Password" class="form-control" autocomplete="current-password"
+                           aria-required="true" placeholder="password" />
+                    <label asp-for="Input.Password" class="form-label">Password</label>
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                <div class="forgot-pwd">
+                    <a id="forgot-password" class="link" asp-page="./ForgotPassword">Forgot your password?</a>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" asp-for="Input.RememberMe" type="checkbox" role="switch"
+                           id="flexSwitchCheckDefault">
+                    <label class="form-check-label" asp-for="Input.RememberMe"
+                           for="flexSwitchCheckDefault">RememberMe</label>
+                </div>
+                <div>
+                    <button id="login-submit" type="submit" class=" btn btn-lg primary mb-3">Login</button>
+                </div>
+            </form>
+            <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl"
+                  method="post" class="form-horizontal">
+                <div>
+                    @foreach (var provider in Model.ExternalLogins!)
+                    {
+                        <button class="google-btn mb-3" name="provider" value="@provider.Name"
+                                title="Log in using your @provider.DisplayName account">
+                            <img src="~/img/google.png"
+                                 alt="google-err"> <span>Sign in with Google</span>
+                        </button>
+                    }
+                </div>
+            </form>
+        </section>
+    </div>
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

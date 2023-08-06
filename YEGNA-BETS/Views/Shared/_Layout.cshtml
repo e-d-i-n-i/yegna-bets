@@ -1,0 +1,127 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YEGNA BETS</title>
+    <link rel="icon" type="image/x-icon" href="~/img/logo.png"/>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/YEGNA_BETS_APP.styles.css" asp-append-version="true" />
+
+    <link rel="stylesheet" href="~/css/table.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/dashboard.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/dropDown.css" asp-append-version="true" />
+    
+    <link rel="stylesheet" href="~/css/hamburgerMenu.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/header.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/navBar.css" asp-append-version="true" />
+
+    <link rel="stylesheet" href="~/css/landingPage.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/manageAccount.css" asp-append-version="true" />
+   
+    <link rel="stylesheet" href="~/css/newBetPage.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/authenticationForm.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/accountForm.css" asp-append-version="true" />
+
+    <link rel="stylesheet" href="~/css/tableResponsive.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/status.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/contentMenu.css" asp-append-version="true" />
+
+
+</head>
+<body>
+
+    @* The Nav Bar - Header*@
+    <header class="head-container">
+        <h4>YEGNA BETS</h4>
+        <div class="menu-container">
+            <button class="menu">
+                <svg width="100" height="100">
+                    <path class="line line1"
+                          d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                    <path class="line line2" d="M 20,50 H 80" />
+                    <path class="line line3"
+                          d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                </svg>
+            </button>
+        </div>
+        <div class="container navbar-container">
+            <ul>
+               @* @if (User.IsInRole("Administrator"))
+                {
+                    <li> <a class="button type3" asp-area="" asp-controller="Admin" asp-action="Insight">@localizer["Insight"]</a></li>
+                }*@
+                @if (User.IsInRole("User"))
+                {
+                    <li> <a class="button type3" asp-area="" asp-controller="Bet" asp-action="Index">Home</a></li>
+                }
+                @if (User.IsInRole("Administrator"))
+                {
+                    <li> <a class="button type3" asp-area="" asp-controller="Bet" asp-action="Index">Bets</a></li>
+                    <li> <a class="button type3" asp-area="" asp-controller="Admin" asp-action="Index">Panel</a></li>
+                }
+                else if (User.IsInRole("User"))
+                {
+                    <li> <a class="button type3" asp-area="" asp-controller="User" asp-action="BuyPackage">Packages</a></li>
+
+                }
+                else
+                {
+                    <li> <a class="button type3" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li> <a class="button type3" asp-area="" asp-controller="Home" asp-action="AboutUs">About Us</a></li>
+                    <li> <a class="button type3" asp-area="" asp-controller="User" asp-action="BuyPackage">Packages</a></li>
+                }
+               
+                <partial name="_LoginPartial" />
+            </ul>
+        </div>
+
+    </header>
+    <div class="row">
+        <nav class="nav-dashboard col-md-6 col-sm-12" id="dash">
+            <ul>
+               @* @if (User.IsInRole("Administrator"))
+                {
+                    <li> <a class="button type3" asp-area="" asp-controller="Admin" asp-action="Insight">@localizer["Insight"]</a></li>
+                }*@
+                @if (User.IsInRole("User"))
+                {
+                    <li> <a class="button type3" asp-area="" asp-controller="Bet" asp-action="Index">Home</a></li>
+                }
+                @if (User.IsInRole("Administrator"))
+                {
+                    <li> <a class="button type3" asp-area="" asp-controller="Bet" asp-action="Index">Bets</a></li>
+                    <li> <a class="button type3" asp-area="" asp-controller="Admin" asp-action="Index">Panel</a></li>
+                }
+                else if (User.IsInRole("User"))
+                {
+                    <li> <a class="button type3" asp-area="" asp-controller="User" asp-action="BuyPackage">Packages</a></li>
+
+                }
+                else
+                {
+                    <li> <a class="button type3" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li> <a class="button type3" asp-area="" asp-controller="Home" asp-action="AboutUs">About Us</a></li>
+                    <li> <a class="button type3" asp-area="" asp-controller="User" asp-action="BuyPackage">Packages</a></li>
+                }
+               
+                <partial name="_LoginPartial" />
+            </ul>
+        </nav>
+    </div>
+
+    @*The other elements goes here*@
+    <div class="wrapper-section">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,151 @@
+﻿@model List<YEGNA_BETS.Models.Domain.Stake>
+@{
+    ViewData["Title"] = "Stakes";
+    var count = 1;
+}
+@functions {
+    public string FormatMoneyString(string moneyString)
+    {
+        decimal value;
+        if (decimal.TryParse(moneyString, out value))
+        {
+            return value.ToString("#,##0.00");
+        }
+        return moneyString;
+    }
+}
+<h4 class="sub-header">My Stakes <img src="~/img/magic-wand.png" class="small-icons" alt="wand-err" /></h4>
+<hr />
+<div class="input-group mb-3 mt-4 p-2">
+    <input placeholder="Search pattern..." id="searchInput" type="text" class="form-control" aria-label="Text input with segmented dropdown button">
+    <button type="button" class="btn btn-success">Search Stakes</button>
+</div>
+
+
+<!-- Add a floating button -->
+<button id="scrollToWinnerButton" class="floating-button" style="display: none;">Scroll to Winner</button>
+
+<table id="stakeTable" class="responsive-table">
+    <thead>
+        <!-- Table headers -->
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Pattern</th>
+            <th scope="col">Total Odds</th>
+            <th scope="col">Probability</th>
+            <th scope="col">IsWinner</th>
+            <th scope="col">Success Count</th>
+            <th scope="col">Payout</th>
+            <th scope="col">Ticket</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var stake in Model)
+        {
+            <tr>
+                <!-- Table row content -->
+                <td data-label="#">@count</td>
+                <td data-label="Pattern">@stake.Pattern</td>
+                <td data-label="Total Odds">@FormatMoneyString(@stake.TotalOdds.ToString())</td>
+                <td data-label="Probability">@FormatMoneyString(@stake.Probability.ToString("0.00")) %</td>
+                @if (stake.IsWinner == 1)
+                {
+                    <td data-label="Status"><span class="btn btn-lg btn-success">winner</span></td>
+                }
+                else if (stake.IsWinner == -1)
+                {
+                    <td data-label="Status">lost</td>
+                }
+                else
+                {
+                    <td data-label="Status">Not Checked</td>
+                }
+                <td data-label="Success Count">@stake.Luck</td>
+                <td data-label="Payout"><span class="txt-money">@FormatMoneyString(@stake.PayOut.ToString())</span> Birr</td>
+                <td data-label="Ticket"><a href="/Bet/StakeDetails/@stake.Id" class="btn btn-dark">View</a></td>
+            </tr>
+            count++;
+        }
+    </tbody>
+</table>
+
+<div class="wrapper-for-center-box">
+    <section>
+        <form asp-controller="Bet" asp-action="GetMatches">
+            <button type="submit" class="w-100 btn btn-lg primary">New Bet ?</button>
+        </form>
+    </section>
+</div>
+
+<div class="wrapper-for-center-box">
+    <section>
+        <form asp-controller="Bet" asp-action="History">
+            <button type="submit" class="w-100 btn btn-lg secondary">Go Back</button>
+        </form>
+    </section>
+</div>
+
+<script type="text/javascript">
+    // Get the button and the table rows
+    const scrollToWinnerButton = document.getElementById("scrollToWinnerButton");
+    const tableRows = document.querySelectorAll("#stakeTable tbody tr");
+    const relevanceFilter = document.getElementById("relevanceFilter");
+    const table = document.getElementById("stakeTable");
+    const searchInput = document.getElementById("searchInput");
+
+    // Check if there is a row with IsWinner = 1
+    const hasWinnerRow = [...tableRows].some((row) => {
+        const isWinnerCell = row.querySelector("td[data-label='Status']");
+        return isWinnerCell.textContent.trim().toLowerCase() === "winner";
+    });
+
+    // Show or hide the floating button based on the condition
+    if (hasWinnerRow) {
+        scrollToWinnerButton.style.display = "block";
+    } else {
+        scrollToWinnerButton.style.display = "none";
+    }
+
+    // Function to scroll to the row with isWinner = 1
+    const scrollToWinner = () => {
+        for (let i = 0; i < tableRows.length; i++) {
+            const row = tableRows[i];
+            const isWinnerCell = row.querySelector("td[data-label='Status']");
+            if (isWinnerCell.textContent.trim().toLowerCase() === "winner") {
+                row.scrollIntoView({ behavior: "smooth", block: "center" });
+                break;
+            }
+        }
+    };
+
+    // Add click event listener to the button
+    scrollToWinnerButton.addEventListener("click", scrollToWinner);
+
+    // Function to filter the table based on search input
+    const filterTable = () => {
+        const filterValue = searchInput.value.toLowerCase();
+        const rows = table.getElementsByTagName("tr");
+
+        for (let i = 1; i < rows.length; i++) { // Start iteration from index 1 to skip the table header row
+            const cells = rows[i].getElementsByTagName("td");
+            let match = false;
+
+            // Check if any cell in the row matches the search input
+            for (let j = 0; j < cells.length; j++) {
+                const cellValue = cells[j].textContent.toLowerCase();
+                if (cellValue.indexOf(filterValue) > -1) {
+                    match = true;
+                    break;
+                }
+            }
+
+            // Show or hide the row based on the match result
+            rows[i].style.display = match ? "" : "none";
+        }
+    };
+
+    // Event listener for the search input
+    searchInput.addEventListener("input", filterTable);
+
+
+</script>

@@ -1,0 +1,43 @@
+﻿@model YEGNA_BETS.Models.AddPackageViewModel
+@{
+    ViewData["Title"] = "Packages Page";
+}
+<h4 class="sub-header">New Package <img src="~/img/package-box.png" class="small-icons" alt="wand-err" /></h4>
+<hr />
+
+<div class="wrapper-for-auth-form">
+    <div class="user-form">
+
+        <section>
+            <form id="change-password-form" method="post" action="AddPackage">
+
+                <div class="content-wrapper item">
+                    <div class="form-floating mb-3">
+                        <input  class="form-control" asp-for="Name" placeholder="Enter Package Name" />
+                        <label class="form-label">Enter Package Name</label>
+                        <span class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" asp-for="Value" placeholder="Enter Value" />
+                        <label  class="form-label">Enter Value</label>
+                        <span  class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" asp-for="Price" placeholder="Enter Price" />
+                        <label  class="form-label">Enter Price (Birr)</label>
+                        <span class="text-danger"></span>
+                    </div>
+
+                    <button type="submit" class="w-100 btn btn-lg primary">Add Package</button>
+
+                </div>
+            </form>
+             <form method="get" asp-controller="Admin" asp-action="ListPackages">
+
+                <div class="content-wrapper item">
+                    <button type="submit" class="w-100 btn btn-lg secondary">Go Back</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>

@@ -1,0 +1,117 @@
+﻿@model List<YEGNA_BETS.Models.Domain.Ticket>
+@{
+    ViewData["Title"] = "Tickets Page";
+    var count = 1;
+}
+<h4 class="sub-header">Tickets <img src="~/img/movie-ticket.png" class="small-icons" alt="wand-err" /></h4>
+<hr />
+
+
+<div class="wrapper-for-auth-form">
+    <div class="user-form">
+
+        <section>
+            <form>
+
+                <div class="content-wrapper item">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Search ticket...">
+                </div>
+            </form>
+
+        </section>
+    </div>
+</div>
+
+<div class="wrapper-for-auth-form">
+    <div class="user-form">
+
+        <section>
+            <form asp-asp-controller="Admin" asp-action="AvailPackages">
+
+                <div class="content-wrapper item">
+                    <button type="submit" class="w-100 btn btn-lg primary">Generate New Tickets</button>
+                </div>
+            </form>
+
+        </section>
+    </div>
+</div>
+
+<div class="table-wrapper">
+    <div class="container pt-5">
+        <table id="ticketTable" class="table table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th class="kill-ticket-col">#</th>
+                    <th>Ticket Code</th>
+                    <th>Package Type</th>
+                    <th class="kill-ticket-col">Value</th>
+                    <th class="kill-ticket-col">Status</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var ticket in Model)
+                {
+                    <tr>
+                        <td class="kill-ticket-col">@count</td>
+                        <td>@ticket.TicketCode</td>
+                        <td class="kill-ticket-col">@ticket.Type</td>
+                        <td class="kill-ticket-col">@ticket.Value</td>
+                        @if (ticket.IsUsed == 0)
+                        {
+                            <td><span class="btn btn-success">Not Used</span></td>
+                        }
+                        else
+                        {
+                            <td><span class="btn btn-danger">Used</span></td>
+                        }
+                        <td><a class="btn btn-outline-success" href="/Admin/TicketDetails/@ticket.Id">Open</a></td>
+                    </tr>
+                    count += 1;
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th class="kill-ticket-col">#</th>
+                    <th>Ticket Code</th>
+                    <th>Package Type</th>
+                    <th class="kill-ticket-col">Value</th>
+                    <th class="kill-ticket-col">Status</th>
+                    <th>Details</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+
+
+
+<script>
+    const table = document.getElementById("ticketTable");
+    const searchInput = document.getElementById("searchInput");
+
+    // Function to filter the table based on search input
+    const filterTable = () => {
+        const filterValue = searchInput.value.toLowerCase();
+        const rows = table.getElementsByTagName("tr");
+
+        for (let i = 0; i < rows.length; i++) {
+            const cells = rows[i].getElementsByTagName("td");
+            let match = false;
+
+            for (let j = 0; j < cells.length; j++) {
+                const cellValue = cells[j].textContent.toLowerCase();
+                if (cellValue.indexOf(filterValue) > -1) {
+                    match = true;
+                    break;
+                }
+            }
+
+            rows[i].style.display = match ? "" : "none";
+        }
+    };
+
+    // Event listener for the search input
+    searchInput.addEventListener("input", filterTable);
+</script>

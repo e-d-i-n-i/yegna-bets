@@ -1,0 +1,63 @@
+﻿@model List<YEGNA_BETS.Models.Domain.Package>
+@{
+    var count = 1;
+    
+    ViewData["Title"] = "List Packages";
+
+}
+<h4 class="sub-header">Packages <img src="~/img/package-box.png" class="small-icons" alt="wand-err" /></h4>
+<hr />
+<div class="wrapper-for-auth-form">
+    <div class="user-form">
+
+        <section>
+            <form asp-asp-controller="Admin" asp-action="Packages">
+
+                <div class="content-wrapper item">
+                    <button type="submit" class="w-100 btn btn-lg primary">Add New Package</button>
+
+                </div>
+            </form>
+
+        </section>
+    </div>
+</div>
+<div class="table-wrapper">
+    <div class="container pt-5">
+        <table id="example" class="table table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Package Name</th>
+                    <th class="kill-package-col">Value</th>
+                    <th class="kill-package-col">Price</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var package in Model)
+                {
+                    <tr>
+                        <td>@count</td>
+                        <td>@package.Name</td>
+                        <td class="kill-package-col">@package.Value</td>
+                        <td class="kill-package-col">@package.Price</td>
+                        <td><a class="btn btn-outline-success" href="/Admin/PackageDetails/@package.Id">Open</a></td>
+                    </tr>
+                    count+= 1;
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>#</th>
+                    <th>Package Name</th>
+                    <th class="kill-package-col">Value</th>
+                    <th class="kill-package-col">Price</th>
+                    <th>Details</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+</div>
+

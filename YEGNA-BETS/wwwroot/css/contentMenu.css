@@ -1,0 +1,153 @@
+﻿.wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+    .wrapper a {
+        text-decoration: none;
+        color: #000;
+    }
+
+.box {
+    min-height: 70px;
+    height: 25vh;
+    width: 20vw;
+    min-width: 20vw;
+    margin: 2rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition-property: box-shadow;
+    transition-duration: 0.8s;
+    transition-timing-function: linear;
+    overflow: hidden;
+    background-color: #ECF2FF;
+    background: #fff;
+    border-radius: 8px;
+    /* transition-delay: 1s;*/
+}
+.box .box-link{
+    padding:0;
+}
+    .box:hover {
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    }
+
+.inside-box {
+    display: flex;
+    height: inherit;
+    justify-content: center;
+    padding:10px;
+}
+
+.icon-box {
+    width: 30%;
+}
+
+.label-box {
+    width: 70%;
+    display:flex;
+    flex-direction:column;
+    margin-right:15px;
+}
+    .label-box h3 {
+        white-space: break-spaces;
+        Color: #000;
+        font-weight: 500;
+    }
+.label-box h6{
+    font-weight:300;
+}
+.box2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.small-icon {
+    height: 63px;
+    width: 63px;
+}
+
+@media screen and (max-width: 370px) {
+    .inside-box {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .small-icon {
+        height: 53px;
+        width: 53px;
+    }
+
+    .icon-box {
+        height: 40%;
+    }
+
+    .label-box {
+        height: 60%
+    }
+}
+
+@media screen and (max-width:575px) {
+    .box {
+        height: 23vh;
+        width: 80vw;
+        margin: 10vw;
+        margin-top: 5vw;
+        margin-bottom: 5vw;
+    }
+
+}
+
+@media screen and (min-width: 575px) and (max-width: 950px) {
+    .box {
+        height: 30vh;
+        width: 40vw;
+        margin: 5vw;
+    }
+
+    .inside-box {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .icon-box {
+        height: 40%;
+    }
+    .label-box {
+        height: 60%;
+    }
+    .small-icon {
+        height: 83px;
+        width: 83px;
+    }
+}
+
+@media screen and (min-width:950px) and (max-width:1295px) {
+    .box {
+        height: 35vh;
+        width: 23vw;
+        margin: 5vw;
+    }
+
+    .inside-box {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .icon-box {
+        height: 40%;
+    }
+
+    .label-box {
+        height: 60%
+    }
+    .small-icon {
+        height: 73px;
+        width: 73px;
+    }
+    .label-box h3 {
+        white-space: break-spaces;
+    }
+}

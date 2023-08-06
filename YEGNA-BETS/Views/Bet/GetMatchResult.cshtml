@@ -1,0 +1,94 @@
+﻿@model List<YEGNA_BETS.Models.Domain.Match>
+@{
+    ViewData["Title"] = "Cross Check";
+    var count = 1;
+}
+<h4 class="sub-header">Matches Betted On <img src="~/img/check.png" class="small-icons" alt="wand-err" /></h4>
+<hr />
+<table id="tblMatchesResult" class="responsive-table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Home Team</th>
+                <th scope="col">Away Team</th>
+                <th scope="col">Browse Match</th>
+                <th scope="col">Select Outcome</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var match in Model)
+            {
+                <tr>
+                    <td data-label="#">@count</td>
+                    <td data-label="Home Team">@match.HomeTeam</td>
+                    <td data-label="Away Team">@match.AwayTeam</td>
+                <td data-label="Browse Match">
+                    <button type="button" onclick="copyToClipboard('@(match.HomeTeam) vs @(match.AwayTeam)')" class="btn btn-sm btn-outline-primary">Copy</button>
+                </td>
+                    <td data-label="Select Outcome">
+                        <select id="match-outcome" class="form-select form-control" aria-label="Default select example">
+                        <option selected >Choose</option>
+                        <option value="W" >Home Team</option>
+                        <option value="D" >Draw</option>
+                        <option value="L" >Away Team</option>
+                        </select>
+                    </td>
+                </tr>
+                count++;
+            }
+        </tbody>
+    </table>
+<div class="wrapper-for-center-box">        
+        <section>
+                <div class="content-wrapper item">
+                    <button type="button" onclick="saveMatcheResult()" id="btn-submit-match-result" class="w-100 btn btn-lg secondary">Check</button>
+                </div>
+        </section>
+</div>
+
+
+@*SCRIPT*@
+<script type="text/javascript">
+
+    function saveMatcheResult() {
+        var matchesResult = "";
+        var rows = $("#tblMatchesResult tbody tr");
+
+        if (rows.length === 0) {
+            console.log("No rows found in the table.");
+            return;
+        }
+
+        rows.each(function () {
+            matchesResult += $(this).find("#match-outcome").val();
+        });
+
+        // Create a <form> element dynamically
+        var form = document.createElement("form");
+        form.method = "POST";
+        form.action = "/Bet/Stakes";
+
+        // Create a hidden input field for each match object
+        var pattern = document.createElement("input");
+        pattern.type = "hidden";
+        pattern.name = "MatchesResult";
+        pattern.value = matchesResult;
+        form.appendChild(pattern);
+
+        // Append the form to the document body and submit it
+        document.body.appendChild(form);
+        form.submit();
+    }
+</script>
+<script type="text/javascript">
+    function copyToClipboard(text) {
+        const el = document.createElement('textarea');
+        el.value = text;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+    }
+</script>
+

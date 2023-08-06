@@ -1,0 +1,33 @@
+﻿@model YEGNA_BETS.Models.AddTransactionViewModel
+@{
+    ViewData["Title"] = "Get Ticket";
+}
+<div class="wrapper-for-auth-form">
+    <div class="user-form">
+
+        <section>
+            <form method="post" asp-controller="User" asp-action="VerifyTicket">
+
+                <div class="content-wrapper item">
+                    <div class="form-floating mb-3">
+                        <input class="form-control" asp-for="Type" readonly />
+                        <label class="form-label">Package Type</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" asp-for="TicketCode" placeholder="Enter Tickect Code"/>
+                        <label class="form-label">Enter Ticket Code</label>
+                        <span class="text-danger"></span>
+                    </div>
+
+                    <button type="submit" class="w-100 btn btn-lg primary">Verify Ticket</button>
+                </div>
+            </form>
+            <form method="get" asp-controller="User" asp-action="BuyPackage">
+
+                <div class="content-wrapper item">
+                    <button type="submit" class="w-100 btn btn-lg secondary">Go Back</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>

@@ -1,0 +1,168 @@
+﻿@model List<YEGNA_BETS.Models.Domain.Pattern>
+@{
+    ViewData["Title"] = "All Patterns";
+    var count = 1;
+}
+<style>
+    .options{
+        display: flex;
+        flex-wrap:wrap;
+        justify-content:space-around;
+    }
+</style>
+<h4 class="sub-header">All Patterns <img src="~/img/pattern.png" class="small-icons" alt="wand-err" /></h4>
+<hr />
+<div class="input-group mb-3 mt-4 p-2">
+    <input placeholder="Search pattern..." id="searchInput" type="text" class="form-control" aria-label="Text input with segmented dropdown button">
+    <button type="button" class="btn btn-success" >Filter Pattern By NoMatch</button>
+    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+        <span class="visually-hidden">Toggle Dropdown</span>
+    </button>
+    <ul id="filterRelevance" class="dropdown-menu dropdown-menu-end">
+        <li><span class="dropdown-item" onclick="filterTableByRelevanceDropDown('1');">1</span></li>
+        <li><span class="dropdown-item" onclick="filterTableByRelevanceDropDown('2');">2</span></li>
+        <li><span class="dropdown-item" onclick="filterTableByRelevanceDropDown('3');">3</span></li>
+        <li><span class="dropdown-item" onclick="filterTableByRelevanceDropDown('4');">4</span></li>
+        <li><span class="dropdown-item" onclick="filterTableByRelevanceDropDown('5');">5</span></li>
+        <li><span class="dropdown-item" onclick="filterTableByRelevanceDropDown('6');">6</span></li>
+        <li><span class="dropdown-item" onclick="filterTableByRelevanceDropDown('7');">7</span></li>
+        <li><span class="dropdown-item" onclick="filterTableByRelevanceDropDown('8');">8</span></li>
+        <li><span class="dropdown-item" onclick="filterTableByRelevanceDropDown('9');">9</span></li>
+        <li><span class="dropdown-item" onclick="filterTableByRelevanceDropDown('10');">10</span></li>
+    </ul>
+
+</div>
+
+@if (Model.Count > 0)
+{
+    <table id="patternTable" class="responsive-table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Pattern</th>
+                <th scope="col">Number of Matches</th>
+                <th scope="col">Success Count</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var pattern in Model)
+            {
+                <tr>
+                    <td data-label="#">@count</td>
+                    <td data-label="Pattern">@pattern.Patterns</td>
+                    <td data-label="Number of Number of Matches">@pattern.NoMatches</td>
+                    @if (pattern.successCount > 20)
+                    {
+                        <td data-label="Success Count"><span class="btn btn-success">@pattern.successCount</span></td>
+                    }
+                    else if (pattern.successCount > 10)
+                    {
+                        <td data-label="Success Count"><span class="btn btn-warning">@pattern.successCount</span></td>
+                    }
+                    else
+                    {
+                        <td data-label="Success Count"><span class="btn btn-secondary">@pattern.successCount</span></td>
+                    }
+                </tr>
+                count++;
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <!-- Empty table message -->
+}
+
+<script>
+    const table = document.getElementById("patternTable");
+    const searchInput = document.getElementById("searchInput");
+    const tableRows = document.querySelectorAll("#patternTable tbody tr");
+    const relevanceFilter = document.getElementById("relevanceFilter");
+
+    // Function to filter the table based on search input
+    const filterTable = () => {
+        const filterValue = searchInput.value.toLowerCase();
+        const rows = table.getElementsByTagName("tr");
+
+        for (let i = 1; i < rows.length; i++) { // Start iteration from index 1 to skip the table header row
+            const cells = rows[i].getElementsByTagName("td");
+            let match = false;
+
+            // Check if any cell in the row matches the search input
+            for (let j = 0; j < cells.length; j++) {
+                const cellValue = cells[j].textContent.toLowerCase();
+                if (cellValue.indexOf(filterValue) > -1) {
+                    match = true;
+                    break;
+                }
+            }
+
+            // Show or hide the row based on the match result
+            rows[i].style.display = match ? "" : "none";
+        }
+    };
+
+    // Event listener for the search input
+    searchInput.addEventListener("input", filterTable);
+
+
+
+    // Function to filter the table based on relevance selection from the dropdown menu
+    function filterTableByRelevanceDropDown(value) {
+        const filterValue = value;
+        const rows = table.getElementsByTagName("tr");
+
+        for (let i = 1; i < rows.length; i++) {
+            const numberofmatchesCountCell = rows[i].querySelector(
+                "td[data-label='Number of Matches']"
+            );
+            const numberofmatches = parseInt(numberofmatchesCell.textContent);
+
+            let displayRow = false;
+
+            // Check the filter value and set the displayRow flag accordingly
+            switch (filterValue) {
+                case "all":
+                    displayRow = true;
+                    break;
+                case "1":
+                    displayRow = numberofmatches = 1;
+                    break;
+                case "2":
+                    displayRow = numberofmatches = 2;
+                    break;
+                case "3":
+                    displayRow = numberofmatches = 3;
+                    break;
+                case "4":
+                    displayRow = numberofmatches = 4;
+                    break;
+                case "5":
+                    displayRow = numberofmatches = 5;
+                    break;
+                case "6":
+                    displayRow = numberofmatches = 6;
+                    break;
+                case "7":
+                    displayRow = numberofmatches = 7;
+                    break;
+                case "8":
+                    displayRow = numberofmatches = 8;
+                    break;
+                case "9":
+                    displayRow = numberofmatches = 9;
+                    break;
+                case "10":
+                    displayRow = numberofmatches = 10;
+                    break;
+            }
+
+            // Show or hide the row based on the displayRow flag
+            rows[i].style.display = displayRow ? "" : "none";
+        }
+    };
+
+</script>
+

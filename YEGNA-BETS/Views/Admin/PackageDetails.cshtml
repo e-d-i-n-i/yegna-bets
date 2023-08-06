@@ -1,0 +1,55 @@
+﻿@model YEGNA_BETS.Models.UpdatePackageViewModel
+@{
+    ViewData["Title"] = "Details";
+}
+<h4 class="sub-header">Package Details <img src="~/img/package-box.png" class="small-icons" alt="wand-err" /></h4>
+<hr />
+
+<div class="wrapper-for-auth-form">
+    <div class="user-form">
+
+        <section>
+            <form  method="post" action="PackageDetails">
+
+                <div class="content-wrapper item">
+                    <div class="form-floating mb-3">
+                        <input class="form-control" asp-for="Id" readonly />
+                        <label class="form-label">Id</label>
+
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" asp-for="Timestamp" placeholder="Enter Price" readonly />
+                        <label class="form-label">Timestamp</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" asp-for="Name" placeholder="Change Package Name" />
+                        <label class="form-label">Package Name</label>
+                        <span class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" asp-for="Value" placeholder="Change Value" />
+                        <label class="form-label">Value</label>
+                        <span class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" asp-for="Price" placeholder="Change Price" />
+                        <label class="form-label">Price (Birr)</label>
+                        <span class="text-danger"></span>
+                    </div>
+
+                   
+
+
+                    <button type="submit" class="w-100 btn btn-lg primary">Update Package</button>
+                    <button type="submit" asp-controller="Admin" asp-action="DeletePackage" class="w-100 btn btn-lg danger">Delete Package</button>
+                </div>
+            </form>
+            <form method="get" asp-controller="Admin" asp-action="ListPackages">
+
+                <div class="content-wrapper item">
+                    <button type="submit" class="w-100 btn btn-lg secondary">Go Back</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>

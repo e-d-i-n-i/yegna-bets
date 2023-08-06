@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Bets";
+}
+<div class="wrapper">
+
+    <a class="box-link" asp-controller="Bet" asp-action="GetMatches">
+        <div class="box">
+            <div class="inside-box">
+                <div class=" icon-box box2">
+                    <img src="~/img/magic-wand2.png" alt="-err" class="small-icon">
+                </div>
+                <div class=" label-box  box2">
+                    <h3>New Bet</h3>
+                    <h6>Generate Possibilies</h6>
+
+                </div>
+            </div>
+        </div>
+    </a>
+    
+    <a class="box-link" asp-controller="Bet" asp-action="CrossCheck">
+        <div class="box">
+            <div class="inside-box">
+                <div class=" icon-box box2">
+                    <img src="~/img/medal2.png" alt="-err" class="small-icon">
+                </div>
+                <div class=" label-box  box2">
+                    <h3>Check Winner</h3>
+                    <h6>Verify which stake got lucky!</h6>
+
+                </div>
+            </div>
+        </div>
+    </a>
+    <a class="box-link" asp-controller="Bet" asp-action="History">
+        <div class="box">
+            <div class="inside-box">
+                <div class=" icon-box box2">
+                    <img src="~/img/ancient-scroll.png" alt="-err" class="small-icon">
+                </div>
+                <div class=" label-box  box2">
+                    <h3>History</h3>
+                    <h6>Checkout previous bets.</h6>
+
+                </div>
+            </div>
+        </div>
+    </a>
+    
+</div>

@@ -1,0 +1,99 @@
+﻿@model int
+@{
+    ViewData["Title"] = "Manage Account";
+}
+<style>
+    .inside{
+        box-shadow: 0 0 0 0.1rem silver, 0 0 0 0.1rem silver;
+    }
+
+
+</style>
+<div class="wrapper-for-auth-form">
+    <div class="user-form">
+        <section>
+            <form method="post" asp-controller="User" asp-action="VerifyTicket">
+
+                <div class="content-wrapper item">
+                    <div class="input-group input-group-lg form-control">
+                        <span class="input-group-text inside" id="inputGroup-sizing-lg">❤️ Remaing Lifes:</span>
+                        <input type="text" value="@Model" class="form-control inside" disabled aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                    </div>
+              </div>
+            </form>
+        </section>
+    </div>
+</div>
+<div class="wrapper">
+
+<a asp-area="Identity" asp-page="/Account/Manage/Index">
+    <div class="box">
+        <div class="inside-box">
+            <div class=" icon-box box2">
+                <img src="~/img/user3.png" alt="-err" class="small-icon">
+            </div>
+            <div class=" label-box  box2">
+                <h3>Profile</h3>
+                <h6>Manage personal information</h6>
+
+            </div>
+        </div>
+    </div>
+</a>
+<a asp-area="Identity" asp-page="/Account/Manage/ChangePassword">
+    <div class="box">
+        <div class="inside-box">
+            <div class=" icon-box box2">
+                <img src="~/img/security2.png" alt="-err" class="small-icon">
+            </div>
+            <div class=" label-box  box2">
+                <h3>Security</h3>
+                <h6>Change Password</h6>
+
+            </div>
+        </div>
+    </div>
+</a>
+<a asp-area="Identity" asp-page="/Account/Manage/Email">
+    <div class="box">
+        <div class="inside-box">
+            <div class=" icon-box box2">
+                <img src="~/img/email2.png" alt="-err" class="small-icon">
+            </div>
+            <div class=" label-box  box2">
+                <h3>Email</h3>
+                <h6>Change email address</h6>
+
+            </div>
+        </div>
+    </div>
+</a>
+<a asp-controller="User" asp-action="BuyPackage">
+    <div class="box">
+        <div class="inside-box">
+            <div class=" icon-box box2">
+                <img src="~/img/crown2.png" alt="-err" class="small-icon">
+            </div>
+            <div class=" label-box  box2">
+                <h3>Buy</h3>
+                <h6>Buy packages</h6>
+
+            </div>
+        </div>
+    </div>
+</a>
+@*<a asp-controller="User" asp-action="Transactions">
+    <div class="box">
+        <div class="inside-box">
+            <div class=" icon-box box2">
+                <img src="~/img/calendar2.png" alt="-err" class="small-icon">
+            </div>
+            <div class=" label-box  box2">
+                <h3>My Transactions</h3>
+                <h6>Transactions records</h6>
+
+            </div>
+        </div>
+    </div>
+</a>*@
+</div>

@@ -1,0 +1,91 @@
+﻿@model List<YEGNA_BETS.Models.Domain.ApplicationUser>
+@{
+    ViewData["Title"] = "All Users";
+    var count = 1;
+}
+<h4 class="sub-header">All Users <img src="~/img/user.png" class="small-icons" alt="wand-err" /></h4>
+<hr />
+
+<div class="wrapper-for-auth-form">
+    <div class="user-form">
+
+        <section>
+            <form>
+
+                <div class="content-wrapper item">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Search user...">
+                </div>
+            </form>
+
+        </section>
+    </div>
+</div>
+
+@if (Model.Count > 0)
+{
+    <table id="userTable" class="responsive-table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Full Name</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Birth Date</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">Registration Date</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td data-label="#">@count</td>
+                    <td data-label="Full Name">@user.FullName</td>
+                    <td data-label="Gender">@user.Gender</td>
+                    <td data-label="Birth Date">@user.BirthDate</td>
+                    <td data-label="Phone Number">@user.PhoneNumber</td>
+                    <td data-label="Registration Date">@user.RegistrationDate</td>
+                </tr>
+                count++;
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="wrapper-for-center-box">
+        <section class="text">
+            <h3>No Records!</h3>
+        </section>
+    </div>
+}
+
+
+<script>
+    const table = document.getElementById("userTable");
+    const searchInput = document.getElementById("searchInput");
+
+    // Function to filter the table based on search input
+    const filterTable = () => {
+        const filterValue = searchInput.value.toLowerCase();
+        const rows = table.getElementsByTagName("tr");
+
+        for (let i = 0; i < rows.length; i++) {
+            const cells = rows[i].getElementsByTagName("td");
+            let match = false;
+
+            for (let j = 0; j < cells.length; j++) {
+                const cellValue = cells[j].textContent.toLowerCase();
+                if (cellValue.indexOf(filterValue) > -1) {
+                    match = true;
+                    break;
+                }
+            }
+
+            rows[i].style.display = match ? "" : "none";
+        }
+    };
+
+    // Event listener for the search input
+    searchInput.addEventListener("input", filterTable);
+</script>

@@ -1,0 +1,18 @@
+﻿@page
+@model ConfirmEmailModel
+@{
+    ViewData["Title"] = "Confirm email";
+}
+
+<partial name="_StatusMessage" model="Model.StatusMessage" />
+<div class="wrapper-for-auth-form">
+    <div class="auth-form">
+        <section>
+            <h1 class="slogan"> Let's get you logged in!</h1>
+
+            <form class="form-inline" asp-area="Identity" asp-page="/Account/Login">
+                <button class="w-100 btn btn-lg primary">login</button>
+            </form>
+        </section>
+    </div>
+</div>

@@ -1,0 +1,185 @@
+﻿.wrapper-for-new-bet {
+    width: 100%;
+    height: auto;
+    /*border: 2px solid red;*/
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+    overflow: hidden;
+}
+
+    .wrapper-for-new-bet .match-info {
+        width: 80%;
+    }
+
+    .wrapper-for-new-bet .one-match:nth-child(odd) {
+        background-color: #B0DAFF;
+    }
+
+    .wrapper-for-new-bet .one-match:nth-child(2n) {
+        background-color: #DBDFEA;
+    }
+
+.btn-bet {
+    background-color: #3E54AC;
+    background: #4942E4;
+    color: #fff;
+    height: 70px;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    min-width: 20%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    position: relative;
+    float: right;
+    margin-top: 30px;
+}
+
+    .btn-bet:hover {
+        background-color: #F0A04B;
+        color: #fff;
+    }
+
+.one-match {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 1.2rem;
+    padding: 12px;
+    padding-bottom: 0;
+    border-radius: 10px;
+}
+
+.match-input-box {
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+    align-content: center;
+}
+
+.match-odd-input-box {
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+    align-content: center;
+}
+
+.odd-field {
+    margin-left: 5px;
+}
+
+.text-vs {
+    margin: 1rem;
+}
+
+@media screen and (max-width: 700px) {
+    .wrapper-for-new-bet {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1123px) {
+    .one-match {
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .match-input-box {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .match-odd-input-box {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .btn-bet {
+        width: 60%;
+        position: static;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}
+
+@media screen and (max-width:671px) {
+    .match-odd-input-box {
+        flex-direction: column;
+    }
+
+    .btn-bet {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media screen and (max-width:230px) {
+    .match-input-box {
+        flex-direction: column;
+    }
+}
+
+/*Budget tab*/
+
+.money-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    width: 50%;
+    padding: 15px;
+    border-radius: 10px;
+    background:#fff;
+}
+
+.gov-field {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+    .gov-field div {
+        width: 100%;
+    }
+
+        .gov-field div:first-child {
+            margin-right: 2vw;
+        }
+
+.btn-generate {
+    background: #3E54AC;
+    color: #fff;
+    height: 70px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    min-width: 20%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+    .btn-generate:hover {
+        background-color: #F0A04B;
+        color: #fff;
+    }
+
+
+@media screen and (max-width: 700px) {
+    .money-form {
+        width: 100%;
+        box-shadow:none;
+    }
+}
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+    .money-form {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .gov-field {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Post";
+}
+
+<div class="wrapper">
+
+    <a asp-controller="News" asp-action="Feed">
+        <div class="box">
+            <div class="inside-box">
+                <div class=" icon-box box2">
+                    <img src="~/img/home.png" alt="-err" class="small-icon">
+                </div>
+                <div class=" label-box  box2">
+                    <h3>Feed</h3>
+                    <h6>Home page for users</h6>
+
+                </div>
+            </div>
+        </div>
+    </a>
+    <a asp-controller="News" asp-action="UpComingMatches">
+        <div class="box">
+            <div class="inside-box">
+                <div class=" icon-box box2">
+                    <img src="~/img/soccer-ball.png" alt="-err" class="small-icon">
+                </div>
+                <div class=" label-box  box2">
+                    <h3>Upcoming Matches</h3>
+                    <h6>Post and manage upcoming matches</h6>
+
+                </div>
+            </div>
+        </div>
+    </a>
+    <a asp-controller="News" asp-action="News">
+        <div class="box">
+            <div class="inside-box">
+                <div class=" icon-box box2">
+                    <img src="~/img/broadcast.png" alt="-err" class="small-icon">
+                </div>
+                <div class=" label-box  box2">
+                    <h3>News</h3>
+                    <h6>Post and manage News</h6>
+                </div>
+            </div>
+        </div>
+    </a>
+
+</div>

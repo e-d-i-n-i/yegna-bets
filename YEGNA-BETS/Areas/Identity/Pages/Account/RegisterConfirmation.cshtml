@@ -1,0 +1,50 @@
+﻿@page
+@model RegisterConfirmationModel
+@{
+    ViewData["Title"] = "Register confirmation";
+}
+
+@{
+    if (@Model.DisplayConfirmAccountLink)
+    {
+
+        <div class="wrapper-for-auth-form">
+            <div class="auth-form">
+                <section>
+                    <h1 class="slogan">@ViewData["Title"]</h1>
+                    <h6>
+                        This app does not currently have a real email sender registered, so click here to confirm your account.
+                    </h6>
+
+                    <a class="form-inline" id="confirm-link" href="@Model.EmailConfirmationUrl">
+                        <button class="w-100 btn btn-lg secondary">Click here to confirm</button>
+                    </a>
+                </section>
+            </div>
+        </div>
+        //<p>
+        //    This app does not currently have a real email sender registered, see <a href="https://aka.ms/aspaccountconf">these docs</a> for how to configure a real email sender.
+        //    Normally this would be emailed: <a id="confirm-link" href="@Model.EmailConfirmationUrl">Click here to confirm your account</a>
+        //</p>
+    }
+    else
+    {
+        //<p>
+        //        Please check your email to confirm your account.
+        //</p>
+        <div class="wrapper-for-auth-form">
+            <div class="auth-form">
+                <section>
+                    <h1 class="slogan">@ViewData["Title"]</h1>
+                    <h6>
+                        Please check your email to confirm your account.
+                    </h6>
+                    <form class="form-inline" asp-area="Identity" asp-page="/Account/Login">
+                        <button class="w-100 btn btn-lg primary">login</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+    }
+}
+

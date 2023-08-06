@@ -1,0 +1,29 @@
+﻿@*@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+*@
+@using Microsoft.AspNetCore.Identity
+@using YEGNA_BETS.Models.Domain;
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <li class="nav-item">
+        <a class="button type3" asp-controller="User" asp-action="Index">Account</a>
+    </li>
+    <li class="nav-item">
+        <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+            <button type="submit" class="button type3 text-white">Logout</button>
+        </form>
+    </li>
+}
+else
+{
+    <li>
+        <a class="button type3" asp-area="Identity" asp-page="/Account/Register">Register</a>
+    </li>
+    <li>
+        <a class="button type3" asp-area="Identity" asp-page="/Account/Login">Login</a>
+    </li>
+}

@@ -1,0 +1,561 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\YEGNA-BETS.bundle.scp.css",
+      "PackagePath": "staticwebassets\\YEGNA-BETS.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\Uploads\\ab5b1148-f2c3-43e0-b871-6a5f4354bf64.png",
+      "PackagePath": "staticwebassets\\Uploads\\ab5b1148-f2c3-43e0-b871-6a5f4354bf64.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\Uploads\\c2eee261-e519-4c3d-ba66-7ed8d4a04100.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\c2eee261-e519-4c3d-ba66-7ed8d4a04100.jpg"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\Uploads\\d1de2086-2d8f-47e5-848d-07dda013ac71.png",
+      "PackagePath": "staticwebassets\\Uploads\\d1de2086-2d8f-47e5-848d-07dda013ac71.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\css\\accountForm.css",
+      "PackagePath": "staticwebassets\\css\\accountForm.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\css\\authenticationForm.css",
+      "PackagePath": "staticwebassets\\css\\authenticationForm.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\css\\contentMenu.css",
+      "PackagePath": "staticwebassets\\css\\contentMenu.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\css\\dashboard.css",
+      "PackagePath": "staticwebassets\\css\\dashboard.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\css\\dropDown.css",
+      "PackagePath": "staticwebassets\\css\\dropDown.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\css\\hamburgerMenu.css",
+      "PackagePath": "staticwebassets\\css\\hamburgerMenu.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\css\\header.css",
+      "PackagePath": "staticwebassets\\css\\header.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\css\\landingPage.css",
+      "PackagePath": "staticwebassets\\css\\landingPage.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\css\\manageAccount.css",
+      "PackagePath": "staticwebassets\\css\\manageAccount.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\css\\navBar.css",
+      "PackagePath": "staticwebassets\\css\\navBar.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\css\\newBetPage.css",
+      "PackagePath": "staticwebassets\\css\\newBetPage.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\css\\status.css",
+      "PackagePath": "staticwebassets\\css\\status.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\css\\table.css",
+      "PackagePath": "staticwebassets\\css\\table.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\css\\tableResponsive.css",
+      "PackagePath": "staticwebassets\\css\\tableResponsive.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\ancient-scroll.png",
+      "PackagePath": "staticwebassets\\img\\ancient-scroll.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\bet-ticket.png",
+      "PackagePath": "staticwebassets\\img\\bet-ticket.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\broadcast.png",
+      "PackagePath": "staticwebassets\\img\\broadcast.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\calendar.png",
+      "PackagePath": "staticwebassets\\img\\calendar.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\calendar2.png",
+      "PackagePath": "staticwebassets\\img\\calendar2.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\calendar3.png",
+      "PackagePath": "staticwebassets\\img\\calendar3.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\check.png",
+      "PackagePath": "staticwebassets\\img\\check.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\clock.png",
+      "PackagePath": "staticwebassets\\img\\clock.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\connection.png",
+      "PackagePath": "staticwebassets\\img\\connection.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\crown.png",
+      "PackagePath": "staticwebassets\\img\\crown.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\crown2.png",
+      "PackagePath": "staticwebassets\\img\\crown2.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\deposit.png",
+      "PackagePath": "staticwebassets\\img\\deposit.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\dollar.png",
+      "PackagePath": "staticwebassets\\img\\dollar.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\dollar2.png",
+      "PackagePath": "staticwebassets\\img\\dollar2.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\email.png",
+      "PackagePath": "staticwebassets\\img\\email.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\email2.png",
+      "PackagePath": "staticwebassets\\img\\email2.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\email3.png",
+      "PackagePath": "staticwebassets\\img\\email3.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\export.png",
+      "PackagePath": "staticwebassets\\img\\export.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\folder.png",
+      "PackagePath": "staticwebassets\\img\\folder.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\football.png",
+      "PackagePath": "staticwebassets\\img\\football.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\friends.png",
+      "PackagePath": "staticwebassets\\img\\friends.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\generate.png",
+      "PackagePath": "staticwebassets\\img\\generate.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\google.png",
+      "PackagePath": "staticwebassets\\img\\google.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\green-user.png",
+      "PackagePath": "staticwebassets\\img\\green-user.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\group.png",
+      "PackagePath": "staticwebassets\\img\\group.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\heart.png",
+      "PackagePath": "staticwebassets\\img\\heart.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\history.png",
+      "PackagePath": "staticwebassets\\img\\history.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\home.png",
+      "PackagePath": "staticwebassets\\img\\home.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\insight.png",
+      "PackagePath": "staticwebassets\\img\\insight.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\key-chain.png",
+      "PackagePath": "staticwebassets\\img\\key-chain.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\magic-wand.png",
+      "PackagePath": "staticwebassets\\img\\magic-wand.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\magic-wand2.png",
+      "PackagePath": "staticwebassets\\img\\magic-wand2.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\manuscript.png",
+      "PackagePath": "staticwebassets\\img\\manuscript.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\market.png",
+      "PackagePath": "staticwebassets\\img\\market.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\medal.png",
+      "PackagePath": "staticwebassets\\img\\medal.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\medal2.png",
+      "PackagePath": "staticwebassets\\img\\medal2.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\movie-ticket.png",
+      "PackagePath": "staticwebassets\\img\\movie-ticket.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\package-box.png",
+      "PackagePath": "staticwebassets\\img\\package-box.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\pattern.png",
+      "PackagePath": "staticwebassets\\img\\pattern.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\pie.png",
+      "PackagePath": "staticwebassets\\img\\pie.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\placeholder.png",
+      "PackagePath": "staticwebassets\\img\\placeholder.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\profile.png",
+      "PackagePath": "staticwebassets\\img\\profile.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\receipt.png",
+      "PackagePath": "staticwebassets\\img\\receipt.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\security.png",
+      "PackagePath": "staticwebassets\\img\\security.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\security2.png",
+      "PackagePath": "staticwebassets\\img\\security2.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\soccer-ball.png",
+      "PackagePath": "staticwebassets\\img\\soccer-ball.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\star.png",
+      "PackagePath": "staticwebassets\\img\\star.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\ticket-bet.png",
+      "PackagePath": "staticwebassets\\img\\ticket-bet.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\ticket.png",
+      "PackagePath": "staticwebassets\\img\\ticket.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\tickets.png",
+      "PackagePath": "staticwebassets\\img\\tickets.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\transaction-history.png",
+      "PackagePath": "staticwebassets\\img\\transaction-history.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\user-profile.png",
+      "PackagePath": "staticwebassets\\img\\user-profile.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\user.png",
+      "PackagePath": "staticwebassets\\img\\user.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\user2.png",
+      "PackagePath": "staticwebassets\\img\\user2.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\user3.png",
+      "PackagePath": "staticwebassets\\img\\user3.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\img\\user4.png",
+      "PackagePath": "staticwebassets\\img\\user4.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Documents\\PRIMARY\\DEV\\YEDI-BETS\\YEGNA-BETS\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.YEGNA-BETS.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.YEGNA-BETS.props",
+      "PackagePath": "build\\YEGNA-BETS.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.YEGNA-BETS.props",
+      "PackagePath": "buildMultiTargeting\\YEGNA-BETS.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.YEGNA-BETS.props",
+      "PackagePath": "buildTransitive\\YEGNA-BETS.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

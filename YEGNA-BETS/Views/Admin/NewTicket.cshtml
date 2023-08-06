@@ -1,0 +1,35 @@
+﻿@model YEGNA_BETS.Models.AddTicketViewModel
+@{
+    ViewData["Title"] = "New Ticket";
+}
+<h4 class="sub-header">New Ticket <img src="~/img/movie-ticket.png" class="small-icons" alt="wand-err" /></h4>
+<hr />
+
+<div class="wrapper-for-auth-form">
+    <div class="user-form">
+
+        <section>
+            <form method="post" asp-controller="Admin" asp-action="AddTicket">
+                <input type="hidden" asp-for="PackageId" />
+                <div class="content-wrapper item">
+                    <div class="form-floating mb-3">
+                        <input class="form-control" asp-for="Type" placeholder="Enter Price" readonly />
+                        <label class="form-label">Package Type</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" min="1" asp-for="Quantity" placeholder="Enter Quantity" />
+                        <label class="form-label">Enter Quantity</label>
+                        <span class="text-danger"></span>
+                    </div>
+                    <button type="submit" class="w-100 btn btn-lg primary">Add</button>
+                </div>
+            </form>
+            <form method="get" asp-controller="Admin" asp-action="AvailPackages">
+
+                <div class="content-wrapper item">
+                    <button type="submit" class="w-100 btn btn-lg secondary">Go Back</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>

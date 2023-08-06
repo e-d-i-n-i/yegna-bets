@@ -1,0 +1,209 @@
+﻿@model YEGNA_BETS.Models.GetMatchesViewModel
+@{
+    ViewData["Title"] = "New Bet";
+}
+
+<h4 class="sub-header">Generate New Bet <img src="~/img/magic-wand.png" class="small-icons" alt="wand-err" /></h4>
+<hr />
+
+@*INPUT*@
+<div class="wrapper-for-new-bet">
+        <div class="match-info">
+            <div class="one-match">
+                <div class="match-input-box">
+                    <input type="hidden" value="0" id="matchNumber"/>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" type="text" id="HomeTeam" placeholder="HomeTeam" />
+                        <label class="form-label">HomeTeam</label>
+                    </div>
+                    <span class="text-vs">Vs</span>
+                    <div class="form-floating mb-3">
+                    <input class="form-control" type="text" id="AwayTeam"  placeholder="AwayTeam" />
+                        <label class="form-label">AwayTeam</label>
+                    </div>
+                </div>
+                <div class="match-odd-input-box">
+                    <div class="form-floating mb-3 odd-field">
+                    <input type="text" id="OddForHomeTeam"  class="form-control" placeholder="Odd for HomeTeam" />
+                        <label class="form-label">Odd for HomeTeam</label>
+                    </div>
+                    <div class="form-floating mb-3 odd-field">
+                    <input type="text" id="OddForDraw"  class="form-control" placeholder="Odd for Draw" />
+                        <label class="form-label">Odd for Draw</label>
+                    </div>
+                    <div class="form-floating mb-3 odd-field">
+                    <input type="text" id="OddForAwayTeam"  class="form-control" placeholder="Odd for AwayTeam" />
+                        <label class="form-label">Odd for AwayTeam</label>
+                    </div>
+                </div>
+            </div>
+        <button id="match-add" onclick="addMatch()" type="button" class="btn btn-lg btn-bet">Add</button>
+        </div>
+
+    </div>
+
+@*MATCHES*@
+<div class="table-wrapper mt-3 mb-4" id="table-box">
+    <div class="container pt-5">
+        <h2 class="text-center">Inserted Matches</h2>
+        <hr class="mb-4" />
+        <table id="tblMatches" class="responsive-table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Home Team</th>
+                    <th scope="col">Away Team</th>
+                    <th scope="col">Odd For Home</th>
+                    <th scope="col">Odd For Away</th>
+                    <th scope="col">Odd For Draw</th>
+                    <th scope="col">Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+    <button id="bet-submit" onclick="saveMatches()" type="button" class="btn btn-lg btn-bet">Next</button>
+
+</div>
+
+
+@*SCRIPT*@
+<script type="text/javascript">
+   
+    function addMatch() {
+        var matchNumber = document.getElementById("matchNumber").value;
+        var homeTeam = document.getElementById("HomeTeam").value;
+        var awayTeam = document.getElementById("AwayTeam").value;
+        var oddForHomeTeam = document.getElementById("OddForHomeTeam").value;
+        var oddForAwayTeam = document.getElementById("OddForAwayTeam").value;
+        var oddForDraw = document.getElementById("OddForDraw").value;
+
+        if (homeTeam.length < 3 || homeTeam.length > 30 || awayTeam.length < 3 || awayTeam.length > 30) {
+            showToastMessage("Team names should be between 3 and 30 characters long.","warning");
+        } else if (!isDoubleValue(oddForHomeTeam) || !isDoubleValue(oddForAwayTeam) || !isDoubleValue(oddForDraw)) {
+            showToastMessage("Odds should be only double values.","danger");
+        }
+        else if (matchNumber > 7){
+            showToastMessage("The maximum limit reached. Only 7 matches are allowed per bet.", "danger");
+        }
+        else{
+            var matchTableBody = document.querySelector("#tblMatches tbody");
+            var newRow = matchTableBody.insertRow();
+
+            var cells = [];
+            for (var i = 0; i < 7; i++) {
+                cells[i] = newRow.insertCell(i);
+            }
+            //increase match number count
+            document.getElementById("matchNumber").value = parseInt(matchNumber) + 1;
+            matchNumber = parseInt(matchNumber) + 1;
+
+            cells[0].textContent = matchNumber;
+            cells[1].textContent = homeTeam;
+            cells[2].textContent = awayTeam;
+            cells[3].textContent = oddForHomeTeam;
+            cells[4].textContent = oddForAwayTeam;
+            cells[5].textContent = oddForDraw;
+
+            cells[0].setAttribute("data-label", "#");
+            cells[1].setAttribute("data-label", "Home Team");
+            cells[2].setAttribute("data-label", "Away Team");
+            cells[3].setAttribute("data-label", "Odd For Home Team");
+            cells[4].setAttribute("data-label", "Odd For Away Team");
+            cells[5].setAttribute("data-label", "Odd For Draw");
+
+            var removeButton = document.createElement("input");
+            removeButton.type = "button";
+            removeButton.value = "Remove";
+            removeButton.className = "btn btn-danger btn-sm";
+            removeButton.addEventListener("click", function () {
+                removeMatch(this);
+            });
+            cells[6].setAttribute("data-label", "Remove");
+
+            cells[6].appendChild(removeButton);
+
+            document.getElementById("HomeTeam").value = "";
+            document.getElementById("AwayTeam").value = "";
+            document.getElementById("OddForHomeTeam").value = "";
+            document.getElementById("OddForAwayTeam").value = "";
+            document.getElementById("OddForDraw").value = "";
+
+
+            const theTable = document.querySelector('#table-box');
+            if (matchNumber > 0) {
+                theTable.style.display = "flex";
+                showToastMessage("Match Inserted", "success");
+            }
+        }      
+
+        
+    }
+
+    function removeMatch(btn) {
+
+        // Get the row that contains the button.
+        var row = btn.parentNode.parentNode;
+
+        // Remove the row from the table.
+        row.parentNode.removeChild(row);
+
+        //Decreases the number of matches
+        document.getElementById("matchNumber").value = parseInt(document.getElementById("matchNumber").value) - 1;
+        showToastMessage("Match Removed", "warning");
+
+        const theTable = document.querySelector('#table-box');
+        if (parseInt(document.getElementById("matchNumber").value) == 0) {
+            theTable.style.display = "none";
+        }
+       
+    }
+
+    function saveMatches() {
+        var matches = [];
+        var rows = $("#tblMatches tbody tr");
+
+        if (rows.length === 0) {
+            console.log("No rows found in the table.");
+            return;
+        }
+
+        rows.each(function () {
+            var match = {
+                MatchNumber: $(this).find("td").eq(0).html(),
+                HomeTeam: $(this).find("td").eq(1).html(),
+                AwayTeam: $(this).find("td").eq(2).html(),
+                OddForHomeTeam: $(this).find("td").eq(3).html(),
+                OddForAwayTeam: $(this).find("td").eq(4).html(),
+                OddForDraw: $(this).find("td").eq(5).html()
+            };
+
+            matches.push(match);
+        });
+
+        // Create a <form> element dynamically
+        var form = document.createElement("form");
+        form.method = "POST";
+        form.action = "/Bet/NewBet";
+
+        // Create a hidden input field for each match object
+        matches.forEach(function (match, index) {
+            for (var key in match) {
+                if (match.hasOwnProperty(key)) {
+                    var input = document.createElement("input");
+                    input.type = "hidden";
+                    input.name = "Matches[" + index + "]." + key;
+                    input.value = match[key];
+                    form.appendChild(input);
+                }
+            }
+        });
+
+        // Append the form to the document body and submit it
+        document.body.appendChild(form);
+        form.submit();
+    }
+
+</script>

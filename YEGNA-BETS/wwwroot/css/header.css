@@ -1,0 +1,32 @@
+﻿.head-container {
+    display: flex;
+    justify-content: space-between;
+    height: 20vh;
+    width: 100%;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #1D267D;
+    z-index: 50;
+}
+
+    .head-container h4 {
+        color: white;
+        margin-left: 6vw;
+        letter-spacing: 2px;
+        white-space: nowrap;
+    }
+
+
+    @media screen and (max-width: 440px) {
+        .head-container h4 {
+         margin-left: 3vw;
+    }
+}
+@media screen and (max-width:1495px) {
+
+    .head-container {
+        height: 15vh;
+    }
+}

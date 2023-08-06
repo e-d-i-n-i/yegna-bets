@@ -1,0 +1,59 @@
+﻿@model YEGNA_BETS.Models.StakeDetailsViewModel
+@{
+    ViewData["Title"] = "Possibilities";
+    var count = 1;
+}
+<h4 class="sub-header">Stake Ticket <img src="~/img/receipt.png" class="small-icons" alt="wand-err" /></h4>
+<hr />
+<table class="responsive-table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Home Team</th>
+            <th scope="col">Away Team</th>
+            <th scope="col">Outcome</th>
+            <th scope="col">TimeStamp</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var possibility in Model.Possibilities)
+        {
+            <tr>
+                <td data-label="#">@count</td>
+                <td data-label="Home Team">@possibility.HomeTeam</td>
+                <td data-label="Away Team">@possibility.AwayTeam</td>
+                @if (possibility.Outcome == "W")
+                {
+                    <td data-label="Status"><span class="btn btn-lg btn-success">win</span></td>
+                }
+                else if (possibility.Outcome == "L")
+                {
+                    <td data-label="Status"><span class="btn btn-lg btn-danger">Lose</span></td>
+                }
+                else
+                {
+                    <td data-label="Status"><span class="btn btn-lg btn-secondary">Draw</span></td>
+                }
+                <td data-label="Date">@possibility.Timestamp</td>
+            </tr>
+            count++;
+        }
+    </tbody>
+</table>
+
+<div class="wrapper-for-center-box">
+    <section>
+        <a href="/Bet/Stakes/@Model.stake.BetId">
+            <button type="button" class="w-100 btn btn-lg secondary">Go Back</button>
+        </a>
+    </section>
+</div>
+<div class="wrapper-for-center-box">
+    <section>
+        <form asp-controller="Bet" asp-action="GetMatches">
+            <button type="submit" class="w-100 btn btn-lg primary">New Bet?</button>
+        </form>
+    </section>
+</div>
+

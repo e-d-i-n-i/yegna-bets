@@ -1,0 +1,26 @@
+﻿.table-wrapper {
+    width: 90%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    min-height:30vh;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius:10px;
+    padding:10px;
+    background-color:white;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+@media screen and (max-width: 387px) {
+    .kill-package-col {
+        display: none;
+    }
+}
+@media screen and (max-width: 460px) {
+    .kill-ticket-col {
+        display: none;
+    }
+}
+#table-box {
+    display: none;
+}

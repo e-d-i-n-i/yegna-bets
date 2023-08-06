@@ -1,0 +1,84 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Change Profile Information";
+    ViewData["ActivePage"] = ManageNavPages.Index;
+}
+<link rel="stylesheet" href="~/css/accountForm.css" />
+
+
+<h4 class="sub-header">Personal Information <img src="~/img/user3.png" class="small-icons" alt="wand-err" /></h4>
+<hr />
+
+<partial name="_StatusMessage" for="StatusMessage" />
+
+<div class="profile-card">
+    <div class="profile-picture">
+        @if (!string.IsNullOrEmpty(Model.Input.ProfilePicture))
+        {
+            <img src="/uploads/@Model.Input.ProfilePicture" alt="Profile Picture" id="profilePicBox">
+        }
+        else
+        {
+            <img src="/img/placeholder.png" alt="Profile Picture">
+        }
+    </div>
+
+    <form method="post" enctype="multipart/form-data">
+        <div class="profile-info">
+            <div class="form-floating">
+                <input asp-for="Input.FullName" class="form-control" placeholder="Please enter your Full Name." />
+                <label asp-for="Input.FullName" class="form-label">Full Name</label>
+                <span asp-validation-for="Input.FullName" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input asp-for="Username" class="form-control" placeholder="Please choose your username." />
+                <label asp-for="Username" class="form-label">Username</label>
+            </div>
+            <div class="form-floating">
+                <input asp-for="Input.PhoneNumber" class="form-control" placeholder="Please enter your phone number." />
+                <label asp-for="Input.PhoneNumber" class="form-label">Phone Number</label>
+                <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <select asp-for="Input.Gender" class="form-select form-control" id="floatingSelect" aria-label="Floating label select example">
+                    <option selected>Not Selected</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <label asp-for="Input.Gender" for="floatingSelect">Gender</label>
+            </div>
+            <div class="form-floating">
+                <input asp-for="Input.BirthDate" type="date" class="form-control" placeholder="Please enter your birth date." />
+                <label asp-for="Input.BirthDate" class="form-label">Birth Date</label>
+                <span asp-validation-for="Input.BirthDate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-floating">
+            <input asp-for="Input.ImageFile" class="form-control" id="profilePic" onchange="readURL(this)" accept="image/*" style="display: none;" />
+        </div>
+        <div class="d-grid">
+            <button type="button" class="btn btn-lg secondary" id="changeProfile">Change Profile</button>
+        </div>
+        <div class="d-grid mt-2">
+            <button type="submit" class="btn btn-lg primary">Save Changes</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#profilePicBox').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+}

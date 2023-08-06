@@ -1,0 +1,57 @@
+﻿@model YEGNA_BETS.Models.NewBetViewModel
+@{
+    ViewData["Title"] = "New Bet";
+}
+<h4 class="sub-header">Money Details <img src="~/img/dollar.png" class="small-icons" alt="wand-err" /></h4>
+<hr />
+<form method="post" id="budget-form" asp-controller="Bet" asp-action="GenerateBets">
+    <input type="hidden" asp-for="BetId"/>
+    <div class="wrapper-for-new-bet" id="money-form">
+        <div class="money-form">
+            <div class="gov-field">
+                <div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="TAX" type="number" value="15" min="0" max="70" class="form-control" placeholder="TAX" />
+                        <label class="form-label">TAX (%)</label>
+                    </div>
+                </div>
+                <div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="VAT" type="number" value="15" min="0" max="50" class="form-control" placeholder="VAT" />
+                        <label class="form-label">VAT (%)</label>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="form-floating mb-3">
+                    <input asp-for="Budget" type="text" min="1" id="budget" class="form-control" placeholder="Budget" />
+                    <label class="form-label">Budget (birr)</label>
+                </div>
+            </div>
+            <button id="bet-submit" onclick="postForm()" type="button" class="btn btn-lg btn-generate">Generate</button>
+        </div>
+    </div>
+</form>
+<div class="wrapper-for-center-box">
+    <section>
+        <form asp-controller="Bet" asp-action="GetMatches">
+            <button type="submit" class="w-100 btn btn-lg secondary">Go Back</button>
+        </form>
+    </section>
+</div>
+<script>
+    function postForm(){
+        const budget = document.querySelector('#budget').value;
+        if (!isDoubleValue(budget)) {
+            showToastMessage("Budget should be only double value.", "warning");
+        }
+        else if(budget <= 0){
+            showToastMessage("Budget should be greater than 0.", "danger");
+        }
+        else {
+            var form = document.getElementById("budget-form");
+            form.submit();
+        }
+    }
+      
+</script>

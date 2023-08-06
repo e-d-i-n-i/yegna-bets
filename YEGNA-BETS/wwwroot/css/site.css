@@ -1,0 +1,131 @@
+/*
+font-family: 'Carrois Gothic SC', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Ruda', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Montserrat:wght@400;700&family=Ruda&family=Ubuntu&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #e4e7e4;
+    background: #EEF1FF;
+}
+
+.wrapper-section {
+    margin-top: 25vh;
+    margin-bottom: 20px;
+}
+@media screen and (max-width:1495px) {
+    .wrapper-section {
+        margin-top: 17vh;
+    }
+}
+.wrapper-section-hide {
+    display: none;
+    transition-duration: 0.8s;
+    transition-timing-function: ease-in-out;
+}
+footer a {
+    text-decoration: none;
+    color: gray;
+}
+
+.link{
+    color:#000;
+    text-decoration:none;
+}
+
+.small-icons{
+    width:3rem;
+    height:3rem;
+}
+
+.sub-header{
+    margin-left:4vw;
+}
+.text-info-c {
+    color: #F0A04B;
+}
+@media screen and (max-width: 700px) {
+    .text-info-msg {
+        text-align: center;
+    }
+}
+
+.wrapper-for-center-box {
+    width: 100%;
+    margin-top: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+}
+    
+    .wrapper-for-center-box section {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+    }
+        .wrapper-for-center-box section form, a{
+            width: inherit;
+        }
+        .wrapper-for-center-box .text {
+            background: #fff;
+            padding: 10px;
+            font-style: italic;
+            border-radius: 10px;
+            height: 100px;
+            color: #1D267D;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        }
+    @media screen and (max-width:600px){
+        .wrapper-for-center-box section {
+            width: 80%;
+        }
+    }
+
+
+/*HOVERING BUTTONS*/
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #4942E4;
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    border-radius:10px;
+}
+
+    .floating-button:hover {
+        background-color: #F0A04B;
+    }
+
+/*COMBO BOX*/
+.combo-box-wrapper{
+}
+.combo-box {
+    width: 200px;
+    height: 40px;
+}
